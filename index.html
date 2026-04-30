@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hanifah | Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hanifah | Portfolio</title>
 
-<!-- WAJIB: LINK CSS -->
-<link rel="stylesheet" href="css/main.css">
-
+    <!-- Memanggil CSS di folder yang sama sesuai image_f18958.jpg -->
+    <link rel="stylesheet" href="main.css">
 </head>
 
 <body>
@@ -53,7 +52,6 @@
     <div class="card">
         <h3>Sales Data Encryption (AES-256)</h3>
         <p>Secure system using AES-256</p>
-
         <a href="https://github.com/Hanifahgithub3/AES-256" target="_blank" class="btn">
             View on GitHub
         </a>
@@ -62,27 +60,32 @@
 
 <section>
     <h2>Certifications</h2>
-
     <div class="card">
         <h3>Basic Algorithm</h3>
-        <a href="#cert1">View</a>
+        <!-- Link menuju ID modal -->
+        <a href="#cert1" class="btn-view">View Certificate</a>
     </div>
 
     <div class="card">
         <h3>Barista Certification</h3>
-        <a href="#cert2">View</a>
+        <a href="#cert2" class="btn-view">View Certificate</a>
     </div>
 </section>
 
-<!-- MODAL -->
+<!-- MODAL SECTION -->
+<!-- Path gambar disesuaikan dengan image_f18958.jpg (langsung nama file) -->
 <div id="cert1" class="modal">
-    <a href="#">Close</a>
-    <img src="img/algo.jpg">
+    <div class="modal-content">
+        <a href="#" class="close">&times; Close</a>
+        <img src="algo.jpg" alt="Basic Algorithm Certificate">
+    </div>
 </div>
 
 <div id="cert2" class="modal">
-    <a href="#">Close</a>
-    <img src="img/barista.jpg">
+    <div class="modal-content">
+        <a href="#" class="close">&times; Close</a>
+        <img src="barista.jpg" alt="Barista Certificate">
+    </div>
 </div>
 
 <footer>
