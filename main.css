@@ -8,87 +8,83 @@
 
 body {
     font-family: 'Segoe UI', Arial, sans-serif;
-    /* Ganti: Background abu-abu pucat menjadi warna krem mentega yang hangat */
-    background: #fffdf5; 
-    color: #333;
+    /* Background: Krem sangat pucat (warm white) agar lebih nyaman di mata */
+    background: #fdfdfb; 
+    color: #2c3e50;
     line-height: 1.6;
 }
 
 /* HERO SECTION */
 header {
-    /* Ganti: Overlay hitam transparan menjadi gradasi biru laut yang ceria */
-    background: linear-gradient(rgba(46, 139, 192, 0.7), rgba(132, 215, 235, 0.7)), 
+    /* Overlay: Hitam kecokelatan yang dalam untuk kesan premium */
+    background: linear-gradient(rgba(20, 25, 20, 0.75), rgba(20, 25, 20, 0.75)), 
                 url('bg.jfif'); 
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     color: white;
     text-align: center;
-    padding: 120px 30px;
+    padding: 130px 30px;
 }
 
 header h1 {
-    font-size: 50px;
-    letter-spacing: 2px;
+    font-size: 48px;
+    letter-spacing: 3px;
+    font-weight: 700;
 }
 
 header h3 {
     margin-top: 10px;
-    font-weight: normal;
-    font-style: italic;
-    /* Ganti: Hijau tua menjadi kuning neon cerah */
-    color: #fff982; 
+    font-weight: 300;
+    letter-spacing: 1px;
+    /* Warna: Emas Champagne (kesan mewah & dewasa) */
+    color: #d4af37; 
 }
 
 header p {
     margin-top: 20px;
-    max-width: 700px;
+    max-width: 650px;
     margin-inline: auto;
-    font-size: 1.1rem;
+    font-size: 1.05rem;
+    color: #e0e0e0;
 }
 
 /* SECTION LAYOUT */
 section {
-    max-width: 1000px;
+    max-width: 900px;
     margin: auto;
-    padding: 50px 20px;
+    padding: 60px 20px;
 }
 
 h2 {
-    margin-bottom: 25px;
-    /* Ganti: Garis samping hijau tua menjadi hijau toska tropis */
-    border-left: 5px solid #00c9b7; 
+    margin-bottom: 30px;
+    font-weight: 600;
+    /* Aksen: Hijau Hutan (Deep Forest Green) */
+    border-left: 4px solid #1b4d3e; 
     padding-left: 15px;
+    color: #1b4d3e;
 }
 
-/* Ganti: Memindah deklarasi .projects ke atas agar urut secara struktural */
 .projects {
     display: grid;
-    /* Ganti: Sedikit celah antar card agar tidak terlalu rapat */
     grid-template-columns: 1fr 1fr;
-    gap: 20px; 
-}
-
-@media (max-width: 768px) {
-    .projects { grid-template-columns: 1fr; }
-    header h1 { font-size: 35px; }
+    gap: 25px; 
 }
 
 /* CARD SYSTEM */
 .card {
-    /* Ganti: Putih kaku menjadi putih susu yang lembut */
-    background: #fffefb; 
-    padding: 25px;
-    margin-bottom: 0px;
-    border-radius: 12px;
-    /* Ganti: Bayangan abu-abu menjadi sedikit lebih lembut (low opacity) */
-    box-shadow: 0 5px 15px rgba(0,0,0,0.03); 
+    background: #ffffff; 
+    padding: 30px;
+    border-radius: 8px;
+    /* Bayangan: Sangat tipis agar terlihat clean */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05); 
+    border: 1px solid #f0f0f0;
 }
 
-/* CARD WITH BACKGROUNDS (Struktur overlay sama, hanya tone warna diubah) */
+/* CARD WITH BACKGROUNDS */
+/* Menggunakan gradasi yang lebih gelap dan solid untuk profesionalitas */
 .about-card {
-    /* Ganti: Tone abu-abu ke tone biru tua */
-    background: linear-gradient(rgba(35, 60, 90, 0.75), rgba(46, 139, 192, 0.75)), url('me.jfif');
+    background: linear-gradient(rgba(27, 77, 62, 0.85), rgba(27, 77, 62, 0.85)), url('me.jfif');
     background-size: cover;
     background-position: center;
     color: white;
@@ -96,8 +92,7 @@ h2 {
 }
 
 .experience-card {
-    /* Ganti: Tone cokelat kusam ke tone hijau lumut ceria */
-    background: linear-gradient(rgba(30, 90, 80, 0.75), rgba(0, 201, 183, 0.75)), url('bgtuku.jfif');
+    background: linear-gradient(rgba(44, 62, 80, 0.85), rgba(44, 62, 80, 0.85)), url('bgtuku.jfif');
     background-size: cover;
     background-position: center;
     color: white;
@@ -105,8 +100,7 @@ h2 {
 }
 
 .education-card {
-    /* Ganti: Tone cokelat kusam ke tone ungu muda ceria */
-    background: linear-gradient(rgba(130, 100, 180, 0.75), rgba(200, 150, 230, 0.75)), url('edu.jfif');
+    background: linear-gradient(rgba(60, 50, 45, 0.85), rgba(60, 50, 45, 0.85)), url('edu.jfif');
     background-size: cover;
     background-position: center;
     color: white;
@@ -114,41 +108,38 @@ h2 {
 }
 
 .ap-card {
-    /* Ganti: Tone cokelat kusam ke tone oranye matahari */
-    background: linear-gradient(rgba(200, 100, 80, 0.75), rgba(255, 170, 100, 0.75)), url('apr.jfif');
+    background: linear-gradient(rgba(40, 55, 71, 0.85), rgba(40, 55, 71, 0.85)), url('apr.jfif');
     background-size: cover;
     background-position: center;
     color: white;   
     border: none;
 }
 
-/* Teks sorotan di dalam card */
-.about-card strong, .experience-card h3, .experience-card p b {
-    /* Ganti: Hijau tua menjadi kuning neon agar lebih pop */
-    color: #fff982; 
+/* Highlight teks di dalam card */
+.about-card strong, .experience-card h3, .experience-card p b, .education-card strong {
+    color: #d4af37; 
 }
 
 /* BUTTONS */
 .btn-github {
     display: inline-block;
     margin-top: 15px;
-    padding: 10px 16px;
-    /* Ganti: Hitam kaku menjadi biru langit cerah */
-    background-color: #4fc3f7; 
+    padding: 12px 20px;
+    background-color: #1b4d3e; 
     color: #fff;
     text-decoration: none;
-    border-radius: 8px;
+    border-radius: 4px;
     font-size: 14px;
-    font-weight: bold;
+    font-weight: 500;
     transition: 0.3s;
 }
 
 .btn-github:hover {
-    /* Ganti: Abu-abu tua menjadi biru laut */
-    background-color: #2e8bc0; 
+    background-color: #2c3e50; 
+    transform: translateY(-2px);
 }
 
-/* CERTIFICATIONS & BUTTONS */
+/* CERTIFICATIONS */
 .cert-card {
     display: flex;
     justify-content: space-between;
@@ -156,57 +147,42 @@ h2 {
 }
 
 .provider {
-    /* Ganti: Hijau tua menjadi toska ceria */
-    color: #00c9b7; 
-    font-weight: bold;
+    color: #7f8c8d; /* Abu-abu profesional */
+    font-weight: 500;
     font-size: 14px;
 }
 
 .btn-cert {
     display: inline-block;
-    /* Ganti: Biru langit menjadi biru langit cerah agar konsisten */
-    color: #4fc3f7; 
+    color: #1b4d3e; 
     text-decoration: none;
     font-size: 13px;
     font-weight: bold;
-    border: 1px solid #4fc3f7;
-    padding: 5px 12px;
+    border: 1px solid #1b4d3e;
+    padding: 6px 14px;
     border-radius: 4px;
     transition: 0.3s;
 }
 
 .btn-cert:hover {
-    /* Ganti: Biru langit cerah (fill) */
-    background: #4fc3f7; 
+    background: #1b4d3e; 
     color: white;
 }
 
-/* Ganti: Menyatukan duplikasi .tool-card ke deklarasi di bawah */
 .tool-card {
-    /* Ganti: Garis biru muda menjadi garis toska agar match dengan h2 */
-    border-left: 5px solid #00c9b7; 
-    background: #fffefb; /* Putih susu */
-    transition: 0.3s;
-}
-
-.tool-card:hover {
-    transform: translateY(-5px);
-    /* Ganti: Bayangan toska tipis */
-    box-shadow: 0 8px 20px rgba(0, 201, 183, 0.1); 
+    border-left: 4px solid #d4af37; 
+    background: #ffffff;
 }
 
 .tool-card h3 {
-    margin-bottom: 10px;
-    color: #333;
+    color: #1b4d3e;
 }
 
-/* MODAL / POP-UP SYSTEM */
-/* Ganti: Menyatukan duplikasi .modal-overlay */
+/* MODAL / POP-UP */
 .modal-overlay {
     position: fixed;
     top: 0; left: 0; width: 100%; height: 100%;
-    /* Ganti: Overlay hitam kaku menjadi biru laut gelap yang kaya */
-    background: rgba(35, 60, 90, 0.9); 
+    background: rgba(10, 15, 10, 0.95); 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -222,71 +198,44 @@ h2 {
 }
 
 .modal-content {
-    /* Ganti: Putih kaku menjadi putih susu yang lembut */
-    background: #fffefb; 
-    padding: 15px;
-    border-radius: 15px; /* Sedikit lebih melengkung agar fun */
-    max-width: 90%;
-    max-height: 90%;
+    background: white;
+    padding: 10px;
+    border-radius: 4px;
+    max-width: 85%;
+    max-height: 85%;
     position: relative;
-    text-align: center;
-    /* Ganti: Bayangan biru laut gelap tipis */
-    box-shadow: 0 10px 30px rgba(35, 60, 90, 0.2); 
-}
-
-.modal-content img {
-    max-width: 100%;
-    max-height: 70vh;
-    border-radius: 8px; /* Lebih melengkung */
 }
 
 .modal-close {
     position: absolute;
-    top: -15px; right: -15px;
-    /* Ganti: Hijau tua menjadi biru langit cerah */
-    background: #4fc3f7; 
+    top: -40px; right: 0;
     color: white;
-    width: 35px; height: 35px;
-    border-radius: 50%;
+    font-size: 30px;
     text-decoration: none;
-    line-height: 35px;
-    font-weight: bold;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Bayangan kecil */
-}
-
-.modal-close-area {
-    position: absolute;
-    width: 100%; height: 100%;
-    cursor: default;
-}
-
-/* SKILLS TAGS */
-.skills span {
-    display: inline-block;
-    /* Ganti: Gradasi hijau tua menjadi gradasi biru langit ke toska */
-    background: linear-gradient(90deg, #4fc3f7, #00c9b7); 
-    color: white;
-    padding: 8px 15px;
-    margin: 5px;
-    border-radius: 20px;
-    font-size: 14px;
-    font-weight: bold;
 }
 
 /* FOOTER */
 footer {
     text-align: center;
-    padding: 40px 20px;
-    /* Ganti: Hitam kaku menjadi biru laut gelap */
-    background: #233c5a; 
-    color: white;
-    border-top: 5px solid #00c9b7; /* Garis toska di atas */
+    padding: 60px 20px;
+    background: #151a15; 
+    color: #95a5a6;
+    font-size: 14px;
 }
 
 footer a { 
-    /* Ganti: Kuning/hijau pucat menjadi kuning neon cerah */
-    color: #fff982; 
+    color: #d4af37; 
     text-decoration: none; 
     margin: 0 10px; 
+    transition: 0.3s;
+}
+
+footer a:hover {
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .projects { grid-template-columns: 1fr; }
+    header h1 { font-size: 36px; }
 }
 </style>
