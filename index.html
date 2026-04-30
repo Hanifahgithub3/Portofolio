@@ -4,10 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hanifah | Portfolio</title>
-    <!-- Menghubungkan ke file CSS eksternal -->
     <link rel="stylesheet" href="main.css">
 </head>
-
 <body>
 
 <header>
@@ -16,104 +14,115 @@
     <p>
         Beyond pulling shots, I apply my education background to streamline coffee operations. 
         I focus on making the bar run like a well-oiled machine—from maintaining precise 
-        financial records and inventory to delivering a seamless experience for every customer.
+        financial records to delivering a seamless experience.
     </p>
 </header>
 
-<section>
-    <h2>About Me</h2>
-    <div class="card about-card">
-        <p>
-            I have hands-on experience in fast-paced operational environments, where I developed strong problem-solving,
-            multitasking, and decision-making skills.
-        </p>
-        <p>
-            With a background in <strong>Informatics Engineering</strong>, I am interested in using data and technology
-            to improve business operations and efficiency.
-        </p>
-    </div>
-</section>
-
-
-<section>
-    <h2>Education</h2>
-    <div class="card education-card">
-        <p><strong>Bachelor’s Degree in Computer Science (2025)</strong></p>
-        <p>Budi Luhur University, Jakarta, Indonesia | GPA: 3.58</p>
-        <p style="font-size: 0.9rem; margin-top: 150px;">
-            Relevant Coursework: Data Analysis, Database Management, Information Systems, Basic Programming. 
-        </p>
-    </div>
-</section>
-
-<section>
-    <h2>Experience</h2>
-    <div class="card experience-card">
-        <h3>Barista & Ops — Toko Kopi Tuku (July 2022 – April 2026)</h3>
-        
-        <p><b>Commercial & Events:</b></p>
-        <ul>
-            <li>Managed bulk orders and coffee activations for corporate/private events with high precision.</li>
-            <li>Represented the brand in major exhibitions.</li>
-            <li>Served as <b>PIC for 4 Cloud Kitchen outlets</b>.</li>
-        </ul>
-
-        <p><b>Operational & Finance (ERP System):</b></p>
-        <ul>
-            <li>Handled <b>PO processing and data entry via ERP system</b>.</li>
-            <li>Managed transactions and daily sales reporting.</li>
-            <li>Supervised inventory and stock management.</li>
-        </ul>
-    </div>
-</section>
-
-<section>
-    <h2>Academic Projects</h2>
-    <div class="card ap-card">
-        <h3>Sales Data Encryption (AES-256)</h3>
-        <p>
-            Developed a secure web-based system to protect daily sales transaction data using AES-256 encryption.
-        </p>
-
-        <ul>
-            <li>Implemented PHP-based AES-256 encryption/decryption</li>
-            <li>Integrated MySQL for secure financial data storage</li>
-            <li>Applied data security principles</li>
-        </ul>
-
-        <a href="https://github.com/Hanifahgithub3/AES-256" target="_blank">
-            View on GitHub
-        </a>
-    </div>
-</section>
-
-<section>
-    <h2>Certifications</h2>
-    <div class="card cert-card">
-        <div>
-            <h3>Basic Algorithm</h3>
-            <p class="provider">Informatics Engineering</p>
+<main>
+    <section>
+        <h2>About Me</h2>
+        <div class="card about-card">
+            <p>I have hands-on experience in fast-paced operational environments, developing strong problem-solving and decision-making skills.</p>
+            <p>With a background in <strong>Informatics Engineering</strong>, I bridge the gap between business operations and technological efficiency.</p>
         </div>
-        <a href="#cert1" class="btn-cert">View Certificate</a>
-    </div>
+    </section>
 
-    <div class="card cert-card" style="margin-top: 15px;">
-        <div>
-            <h3>Barista Certification</h3>
-            <p class="provider">Hospitality & Operations</p>
+    <section>
+        <h2>Education</h2>
+        <div class="card education-card">
+            <p><strong>Bachelor of Computer Science (2025)</strong></p>
+            <p>Budi Luhur University, Jakarta | GPA: 3.58</p>
+            <p class="coursework">Relevant Coursework: Data Analysis, Database Management, Information Systems, Basic Programming.</p>
         </div>
-        <a href="#cert2" class="btn-cert">View Certificate</a>
-    </div>
-</section>
+    </section>
 
-<!-- MODAL SECTION -->
-<!-- Menggunakan class 'modal-overlay' sesuai dengan CSS kamu -->
+    <section>
+        <h2>Work Experience</h2>
+        <div class="card experience-card">
+            <h3>Barista & Ops — Toko Kopi Tuku</h3>
+            <span class="date">July 2022 – April 2026</span>
+            
+            <div class="exp-grid">
+                <div>
+                    <h4>Commercial & Events</h4>
+                    <ul>
+                        <li>Managed bulk orders and coffee activations for corporate events.</li>
+                        <li>PIC for 4 Cloud Kitchen outlets.</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Operational & Finance</h4>
+                    <ul>
+                        <li>Handled PO processing and data entry via ERP system.</li>
+                        <li>Supervised inventory and daily sales reporting.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Academic Projects</h2>
+        <div class="card ap-card">
+            <h3>Sales Data Encryption (AES-256)</h3>
+            <p>Developed a secure web-based system to protect daily transaction data.</p>
+            <ul>
+                <li>Implemented PHP-based AES-256 encryption.</li>
+                <li>Integrated MySQL for secure financial storage.</li>
+            </ul>
+            <a href="https://github.com/Hanifahgithub3/AES-256" target="_blank" class="btn-github">View on GitHub</a>
+        </div>
+    </section>
+
+    <section>
+        <h2>Certifications</h2>
+        <div class="cert-grid">
+            <div class="card cert-card">
+                <div>
+                    <h3>Basic Algorithm</h3>
+                    <p class="provider">Informatics Engineering</p>
+                </div>
+                <a href="#cert1" class="btn-cert">View</a>
+            </div>
+            <div class="card cert-card">
+                <div>
+                    <h3>Barista Certification</h3>
+                    <p class="provider">Hospitality & Operations</p>
+                </div>
+                <a href="#cert2" class="btn-cert">View</a>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Tools & Tech Stack</h2>
+        <div class="projects">
+            <div class="card tool-card">
+                <h3>Technical Office</h3>
+                <ul>
+                    <li>Excel/Sheets (Forecasting & Reporting)</li>
+                    <li>ERP System (Inventory & PO)</li>
+                    <li>Networking (LAN/WAN Troubleshooting)</li>
+                </ul>
+            </div>
+            <div class="card tool-card">
+                <h3>Development</h3>
+                <ul>
+                    <li>PHP & MySQL (Backend)</li>
+                    <li>VS Code & Laragon (Dev Environment)</li>
+                    <li>Basic Python Scripting</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- MODALS -->
 <div id="cert1" class="modal-overlay">
-    <a href="#" class="modal-close-area"></a> <!-- Klik di luar gambar untuk tutup -->
+    <a href="#" class="modal-close-area"></a>
     <div class="modal-content">
         <a href="#" class="modal-close">&times;</a>
-        <img src="algo.jpg" alt="Basic Algorithm Certificate">
-        <p style="margin-top:10px; color:#333;">Basic Algorithm Certificate</p>
+        <img src="algo.jpg" alt="Algorithm Certificate">
     </div>
 </div>
 
@@ -122,70 +131,16 @@
     <div class="modal-content">
         <a href="#" class="modal-close">&times;</a>
         <img src="barista.jpg" alt="Barista Certificate">
-        <p style="margin-top:10px; color:#333;">Barista Certification</p>
     </div>
 </div>
 
-<section>
-    <h2>Tools & Usage</h2>
-
-    <div class="card tool-card">
-        <h3>Google Sheets / Microsoft Excel</h3>
-        <ul>
-            <li>Daily sales tracking & reporting</li>
-            <li>Stock & inventory monitoring</li>
-            <li>Basic forecasting (estimasi demand harian)</li>
-        </ul>
-    </div>
-
-    <div class="card tool-card">
-        <h3>PHP & MySQL</h3>
-        <ul>
-            <li>Developed AES-256 encryption system</li>
-            <li>Handled CRUD operations</li>
-            <li>Managed secure transaction data</li>
-        </ul>
-    </div>
-
-    <div class="card tool-card">
-        <h3>ERP System (Store Operations)</h3>
-        <ul>
-            <li>Purchase Order (PO) input & processing</li>
-            <li>Sales transaction recording</li>
-            <li>Ensured data accuracy & reporting</li>
-        </ul>
-    </div>
-
-    <div class="card tool-card">
-        <h3>Networking Basics</h3>
-        <ul>
-            <li>Understanding LAN, WAN, IP addressing</li>
-            <li>Troubleshooting basic network issues</li>
-            <li>Supporting store connectivity operations</li>
-        </ul>
-    </div>
-
-</section>
-    
-<section>
-    <h2>Tools & Tech Stack</h2>
-    <div class="projects">
-        <!-- Card VS Code -->
-        <div class="card">
-            <ul>
-                <li>Visual Studio Code</li>
-            <p>Main code editor for web development and Python scripting.</p>
-           <li>Laragon</li> 
-            <p>Local development environment for managing PHP, MySQL, and local servers.</p>
-            </ul>
-        </div>
-    </div>
-</section>
 <footer>
-    <p>Contact:</p>
-    <a href="mailto:hanifahneness@gmail.com">Email</a> |
-    <a href="https://www.linkedin.com/in/hanifahhan" target="_blank">LinkedIn</a> |
-    <a href="https://github.com/Hanifahgithub3" target="_blank">GitHub</a>
+    <p>Contact & Connect</p>
+    <div class="footer-links">
+        <a href="mailto:hanifahneness@gmail.com">Email</a>
+        <a href="https://www.linkedin.com/in/hanifahhan" target="_blank">LinkedIn</a>
+        <a href="https://github.com/Hanifahgithub3" target="_blank">GitHub</a>
+    </div>
 </footer>
 
 </body>
