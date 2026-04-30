@@ -1,241 +1,105 @@
-<style>
-/* CSS RESET & BASE */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+/* BASE STYLES */
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
-    font-family: 'Segoe UI', Arial, sans-serif;
-    /* Background: Krem sangat pucat (warm white) agar lebih nyaman di mata */
-    background: #fdfdfb; 
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    background: #fdfdfb;
     color: #2c3e50;
     line-height: 1.6;
 }
 
-/* HERO SECTION */
 header {
-    /* Overlay: Hitam kecokelatan yang dalam untuk kesan premium */
-    background: linear-gradient(rgba(20, 25, 20, 0.75), rgba(20, 25, 20, 0.75)), 
-                url('bg.jfif'); 
+    background: linear-gradient(rgba(20, 30, 20, 0.8), rgba(20, 30, 20, 0.8)), url('bg.jfif');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     color: white;
     text-align: center;
-    padding: 130px 30px;
+    padding: 100px 20px;
 }
 
-header h1 {
-    font-size: 48px;
-    letter-spacing: 3px;
-    font-weight: 700;
-}
+header h1 { font-size: 3rem; letter-spacing: 2px; }
+header h3 { color: #d4af37; font-weight: 300; margin: 10px 0; }
+header p { max-width: 700px; margin: 20px auto 0; font-size: 1.1rem; opacity: 0.9; }
 
-header h3 {
-    margin-top: 10px;
-    font-weight: 300;
-    letter-spacing: 1px;
-    /* Warna: Emas Champagne (kesan mewah & dewasa) */
-    color: #d4af37; 
-}
-
-header p {
-    margin-top: 20px;
-    max-width: 650px;
-    margin-inline: auto;
-    font-size: 1.05rem;
-    color: #e0e0e0;
-}
-
-/* SECTION LAYOUT */
-section {
-    max-width: 900px;
-    margin: auto;
-    padding: 60px 20px;
-}
+section { max-width: 1000px; margin: auto; padding: 50px 20px; }
 
 h2 {
-    margin-bottom: 30px;
-    font-weight: 600;
-    /* Aksen: Hijau Hutan (Deep Forest Green) */
-    border-left: 4px solid #1b4d3e; 
-    padding-left: 15px;
     color: #1b4d3e;
-}
-
-.projects {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 25px; 
+    border-left: 4px solid #1b4d3e;
+    padding-left: 15px;
+    margin-bottom: 30px;
+    font-size: 1.8rem;
 }
 
 /* CARD SYSTEM */
 .card {
-    background: #ffffff; 
+    background: white;
     padding: 30px;
     border-radius: 8px;
-    /* Bayangan: Sangat tipis agar terlihat clean */
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05); 
-    border: 1px solid #f0f0f0;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    margin-bottom: 20px;
 }
 
-/* CARD WITH BACKGROUNDS */
-/* Menggunakan gradasi yang lebih gelap dan solid untuk profesionalitas */
-.about-card {
-    background: linear-gradient(rgba(27, 77, 62, 0.85), rgba(27, 77, 62, 0.85)), url('me.jfif');
-    background-size: cover;
-    background-position: center;
-    color: white;
-    border: none;
+/* BACKGROUND CARDS */
+.about-card { background: linear-gradient(rgba(27, 77, 62, 0.9), rgba(27, 77, 62, 0.9)), url('me.jfif'); color: white; border: none; }
+.education-card { background: linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.9)), url('edu.jfif'); color: white; border: none; }
+.experience-card { background: linear-gradient(rgba(20, 30, 20, 0.9), rgba(20, 30, 20, 0.9)), url('bgtuku.jfif'); color: white; border: none; }
+.ap-card { background: linear-gradient(rgba(60, 50, 45, 0.9), rgba(60, 50, 45, 0.9)), url('apr.jfif'); color: white; border: none; }
+
+.card h3 { color: #d4af37; margin-bottom: 10px; }
+.coursework { margin-top: 20px; font-size: 0.85rem; opacity: 0.8; font-style: italic; }
+
+/* GRID SYSTEMS */
+.exp-grid, .projects, .cert-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
 }
 
-.experience-card {
-    background: linear-gradient(rgba(44, 62, 80, 0.85), rgba(44, 62, 80, 0.85)), url('bgtuku.jfif');
-    background-size: cover;
-    background-position: center;
-    color: white;
-    border: none;
-}
-
-.education-card {
-    background: linear-gradient(rgba(60, 50, 45, 0.85), rgba(60, 50, 45, 0.85)), url('edu.jfif');
-    background-size: cover;
-    background-position: center;
-    color: white;
-    border: none;
-}
-
-.ap-card {
-    background: linear-gradient(rgba(40, 55, 71, 0.85), rgba(40, 55, 71, 0.85)), url('apr.jfif');
-    background-size: cover;
-    background-position: center;
-    color: white;   
-    border: none;
-}
-
-/* Highlight teks di dalam card */
-.about-card strong, .experience-card h3, .experience-card p b, .education-card strong {
-    color: #d4af37; 
-}
+.exp-grid h4 { color: #d4af37; margin-top: 15px; border-bottom: 1px solid rgba(212, 175, 55, 0.3); }
+ul { list-style-position: inside; margin-top: 10px; }
+li { margin-bottom: 5px; }
 
 /* BUTTONS */
-.btn-github {
+.btn-github, .btn-cert {
     display: inline-block;
     margin-top: 15px;
-    padding: 12px 20px;
-    background-color: #1b4d3e; 
-    color: #fff;
+    padding: 10px 20px;
     text-decoration: none;
     border-radius: 4px;
-    font-size: 14px;
-    font-weight: 500;
-    transition: 0.3s;
-}
-
-.btn-github:hover {
-    background-color: #2c3e50; 
-    transform: translateY(-2px);
-}
-
-/* CERTIFICATIONS */
-.cert-card {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.provider {
-    color: #7f8c8d; /* Abu-abu profesional */
-    font-weight: 500;
-    font-size: 14px;
-}
-
-.btn-cert {
-    display: inline-block;
-    color: #1b4d3e; 
-    text-decoration: none;
-    font-size: 13px;
     font-weight: bold;
-    border: 1px solid #1b4d3e;
-    padding: 6px 14px;
-    border-radius: 4px;
     transition: 0.3s;
 }
 
-.btn-cert:hover {
-    background: #1b4d3e; 
-    color: white;
-}
+.btn-github { background: #d4af37; color: #1b4d3e; }
+.btn-cert { border: 1px solid #1b4d3e; color: #1b4d3e; }
+.btn-cert:hover { background: #1b4d3e; color: white; }
 
-.tool-card {
-    border-left: 4px solid #d4af37; 
-    background: #ffffff;
-}
+/* TOOLS */
+.tool-card { border-top: 4px solid #d4af37; }
+.tool-card h3 { color: #1b4d3e; }
 
-.tool-card h3 {
-    color: #1b4d3e;
-}
-
-/* MODAL / POP-UP */
+/* MODALS */
 .modal-overlay {
     position: fixed;
     top: 0; left: 0; width: 100%; height: 100%;
-    background: rgba(10, 15, 10, 0.95); 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-    opacity: 0;
-    visibility: hidden;
-    transition: 0.3s;
+    background: rgba(0,0,0,0.9);
+    display: flex; justify-content: center; align-items: center;
+    opacity: 0; visibility: hidden; transition: 0.3s; z-index: 1000;
 }
-
-.modal-overlay:target {
-    opacity: 1;
-    visibility: visible;
-}
-
-.modal-content {
-    background: white;
-    padding: 10px;
-    border-radius: 4px;
-    max-width: 85%;
-    max-height: 85%;
-    position: relative;
-}
-
-.modal-close {
-    position: absolute;
-    top: -40px; right: 0;
-    color: white;
-    font-size: 30px;
-    text-decoration: none;
-}
+.modal-overlay:target { opacity: 1; visibility: visible; }
+.modal-content { background: white; padding: 10px; border-radius: 5px; position: relative; max-width: 90%; }
+.modal-content img { max-width: 100%; max-height: 80vh; }
+.modal-close { position: absolute; top: -40px; right: 0; color: white; font-size: 2rem; text-decoration: none; }
+.modal-close-area { position: absolute; width: 100%; height: 100%; cursor: default; }
 
 /* FOOTER */
-footer {
-    text-align: center;
-    padding: 60px 20px;
-    background: #151a15; 
-    color: #95a5a6;
-    font-size: 14px;
-}
+footer { background: #151a15; color: white; text-align: center; padding: 50px 20px; }
+.footer-links { margin-top: 20px; }
+.footer-links a { color: #d4af37; margin: 0 10px; text-decoration: none; }
 
-footer a { 
-    color: #d4af37; 
-    text-decoration: none; 
-    margin: 0 10px; 
-    transition: 0.3s;
+@media (max-width: 600px) {
+    header h1 { font-size: 2rem; }
+    .card { padding: 20px; }
 }
-
-footer a:hover {
-    color: white;
-}
-
-@media (max-width: 768px) {
-    .projects { grid-template-columns: 1fr; }
-    header h1 { font-size: 36px; }
-}
-</style>
