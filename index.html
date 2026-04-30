@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hanifah | Portfolio</title>
-
-    <!-- Memanggil CSS di folder yang sama sesuai image_f18958.jpg -->
+    <!-- Menghubungkan ke file CSS eksternal -->
     <link rel="stylesheet" href="main.css">
 </head>
 
@@ -21,7 +20,8 @@
 
 <section>
     <h2>About Me</h2>
-    <div class="card">
+    <!-- Menambahkan class 'about-card' agar background 'me.jfif' muncul -->
+    <div class="card about-card">
         <p>I have hands-on experience in fast-paced operational environments.</p>
         <p>Background in <strong>Informatics Engineering</strong>.</p>
     </div>
@@ -29,7 +29,8 @@
 
 <section>
     <h2>Education</h2>
-    <div class="card">
+    <!-- Menambahkan class 'education-card' agar background 'edu.jfif' muncul -->
+    <div class="card education-card">
         <p><strong>Bachelor’s Degree in Computer Science (2025)</strong></p>
         <p>Budi Luhur University | GPA: 3.58</p>
     </div>
@@ -37,7 +38,7 @@
 
 <section>
     <h2>Experience</h2>
-    <div class="card">
+    <div class="card experience-card">
         <h3>Barista & Ops — Toko Kopi Tuku</h3>
         <ul>
             <li>Managed bulk orders & events</li>
@@ -49,10 +50,12 @@
 
 <section>
     <h2>Academic Projects</h2>
-    <div class="card">
+    <!-- Menambahkan class 'ap-card' agar background 'apr.jfif' muncul -->
+    <div class="card ap-card">
         <h3>Sales Data Encryption (AES-256)</h3>
         <p>Secure system using AES-256</p>
-        <a href="https://github.com/Hanifahgithub3/AES-256" target="_blank" class="btn">
+        <br>
+        <a href="https://github.com/Hanifahgithub3/AES-256" target="_blank" class="btn-github">
             View on GitHub
         </a>
     </div>
@@ -60,31 +63,40 @@
 
 <section>
     <h2>Certifications</h2>
-    <div class="card">
-        <h3>Basic Algorithm</h3>
-        <!-- Link menuju ID modal -->
-        <a href="#cert1" class="btn-view">View Certificate</a>
+    <div class="card cert-card">
+        <div>
+            <h3>Basic Algorithm</h3>
+            <p class="provider">Informatics Engineering</p>
+        </div>
+        <a href="#cert1" class="btn-cert">View Certificate</a>
     </div>
 
-    <div class="card">
-        <h3>Barista Certification</h3>
-        <a href="#cert2" class="btn-view">View Certificate</a>
+    <div class="card cert-card" style="margin-top: 15px;">
+        <div>
+            <h3>Barista Certification</h3>
+            <p class="provider">Hospitality & Operations</p>
+        </div>
+        <a href="#cert2" class="btn-cert">View Certificate</a>
     </div>
 </section>
 
 <!-- MODAL SECTION -->
-<!-- Path gambar disesuaikan dengan image_f18958.jpg (langsung nama file) -->
-<div id="cert1" class="modal">
+<!-- Menggunakan class 'modal-overlay' sesuai dengan CSS kamu -->
+<div id="cert1" class="modal-overlay">
+    <a href="#" class="modal-close-area"></a> <!-- Klik di luar gambar untuk tutup -->
     <div class="modal-content">
-        <a href="#" class="close">&times; Close</a>
+        <a href="#" class="modal-close">&times;</a>
         <img src="algo.jpg" alt="Basic Algorithm Certificate">
+        <p style="margin-top:10px; color:#333;">Basic Algorithm Certificate</p>
     </div>
 </div>
 
-<div id="cert2" class="modal">
+<div id="cert2" class="modal-overlay">
+    <a href="#" class="modal-close-area"></a>
     <div class="modal-content">
-        <a href="#" class="close">&times; Close</a>
+        <a href="#" class="modal-close">&times;</a>
         <img src="barista.jpg" alt="Barista Certificate">
+        <p style="margin-top:10px; color:#333;">Barista Certification</p>
     </div>
 </div>
 
