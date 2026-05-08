@@ -96,29 +96,69 @@ li { margin-bottom: 5px; }
     letter-spacing: 0.5px;
 }
 
-/* STYLING GAMBAR DASHBOARD EXCEL */
-.study-case-visual {
-    margin: 20px 0;
+/* Container slider biar ukurannya pas di web */
+.slider-wrapper {
+    max-width: 800px; /* Atur lebar maksimal slider */
+    margin: 20px auto;
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 }
 
-.image-container {
-    background: #f4f4f4;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+/* Biar foto bisa digeser horizontal */
+.slides {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: none; /* Hilangin scrollbar di Firefox */
 }
 
-.excel-preview {
+.slides::-webkit-scrollbar {
+    display: none; /* Hilangin scrollbar di Chrome/Safari */
+}
+
+.slide {
+    flex: 0 0 100%; /* Satu foto menuhin satu layar slider */
+    scroll-snap-align: start;
+    position: relative;
+}
+
+.slide img {
     width: 100%;
-    height: auto;
+    height: 450px; /* Atur tinggi foto */
+    object-fit: cover; /* Biar foto gak gepeng */
     display: block;
-    border-radius: 4px;
-    transition: transform 0.3s ease;
 }
 
-.excel-preview:hover {
-    transform: scale(1.02);
+/* Keterangan di bawah foto */
+.caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(27, 77, 62, 0.8); /* Hijau transparan */
+    color: white;
+    padding: 15px;
+    font-size: 0.9em;
+    text-align: center;
+}
+
+/* Navigasi titik-titik (opsional) */
+.slider-nav {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 15px;
+    background: #fff;
+}
+
+.nav-dot {
+    width: 10px;
+    height: 10px;
+    background: #ccc;
+    border-radius: 50%;
 }
 
 /* Grid Responsibilities & Results */
