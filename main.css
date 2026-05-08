@@ -61,6 +61,95 @@ h2 {
 ul { list-style-position: inside; margin-top: 10px; }
 li { margin-bottom: 5px; }
 
+/* Container Utama Study Case */
+.study-case-card {
+    border-left: 4px solid #333; /* Memberikan aksen garis di samping */
+    background-color: #ffffff;
+}
+
+.study-case-header h3 {
+    margin: 0;
+    font-size: 1.4rem;
+}
+
+/* Style untuk Tag (Financial Operations) */
+.tag {
+    background: #eeeeee;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #444;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Style Visualisasi Tabel */
+.bva-preview {
+    overflow-x: auto; /* Agar tabel bisa di-scroll jika layar kekecilan */
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.02);
+}
+
+.bva-preview table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.bva-preview th {
+    color: #888;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+}
+
+.bva-preview td {
+    padding: 10px 0;
+    font-size: 0.9rem;
+    color: #333;
+}
+
+/* Style Khusus untuk Status Budget */
+.bva-preview td[style*="color: #27ae60"] {
+    background-color: rgba(39, 174, 96, 0.1);
+    padding: 2px 8px;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.bva-preview td[style*="color: #e74c3c"] {
+    background-color: rgba(231, 76, 60, 0.1);
+    padding: 2px 8px;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+/* Grid Responsif untuk Responsibilities & Results */
+@media (max-width: 600px) {
+    .study-case-grid {
+        grid-template-columns: 1fr !important; /* Jadi satu kolom kalau di HP */
+        gap: 10px !important;
+    }
+    
+    .study-case-header {
+        flex-direction: column;
+        align-items: flex-start !important;
+        gap: 8px;
+    }
+}
+
+/* Merapikan List di dalam Card */
+.study-case-card ul {
+    margin: 10px 0;
+    padding-left: 20px;
+}
+
+.study-case-card li {
+    margin-bottom: 5px;
+    line-height: 1.4;
+}
+
 /* BUTTONS */
 .btn-github, .btn-cert {
     display: inline-block;
